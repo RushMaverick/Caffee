@@ -12,7 +12,8 @@ public class KoppMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        velocity = playerRB.velocity.y;
-        transform.Translate(-Vector3.right * needforspeed * Time.deltaTime);
+        velocity = Mathf.Log(Mathf.Abs(playerRB.velocity.y));
+        Debug.Log(playerRB.velocity.y);
+        transform.Translate(-Vector3.right * needforspeed * velocity * Time.deltaTime);
     }
 }
