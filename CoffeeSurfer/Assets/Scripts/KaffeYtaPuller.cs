@@ -4,54 +4,57 @@ using UnityEngine;
 
 public class KaffeYtaPuller : MonoBehaviour
 {
-    SpriteRenderer cupObject;
-
-    Collider2D cupCollider;
+    GameObject[] cupObjects;
     Collider2D sugarCollider;
-    
+
     public Sprite spriteNormal;
     public Sprite spriteInverted;
 
     float gravity;
-    float newGravity;
 
+    public GameObject player;
+
+    public BoxCollider2D trigger;
 
     // Start is called before the first frame update
     void Start()
     {
-        cupCollider = GameObject.FindGameObjectWithTag("kaffeyta").GetComponent<Collider2D>();
-        sugarCollider = GameObject.FindGameObjectWithTag("socker").GetComponent<Collider2D>();
-
-        cupObject = GameObject.FindGameObjectWithTag("kaffekopp").GetComponent<SpriteRenderer>();
+        
+        sugarCollider = player.GetComponent<Collider2D>();
+        trigger = GetComponent<BoxCollider2D>();
 
     }
 
     // Update is called once per frame
     void Update()
-
     {
-        gravity = Physics2D.gravity.y;
 
-        if (sugarCollider.IsTouching(cupCollider))
-        {
-            //Debug.Log("Collision!");
-            if (gravity < 0 & !Input.GetKey("space"))
-            {
-                Debug.Log(Physics2D.gravity.y);
-                Debug.Log("Flipping!");
-                Physics2D.gravity = new Vector2(0, gravity * -1.0f);
-                Debug.Log(Physics2D.gravity.y);
+    }
 
-                cupObject.sprite = spriteInverted;
-            }
-            
-        }
-        if (gravity > 0 && !sugarCollider.IsTouching(cupCollider))
+    bool sockerInKaffe = false;
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "socker")
         {
-            Debug.Log("Flipping back!");
-            Physics2D.gravity = new Vector2(0, -9.8f);
-            cupObject.sprite = spriteNormal;
+            Debug.Log("SOCKERINKAFFE");
+            sockerInKaffe = true;
+
+            var player = other.GetComponent<GravityChanger>();
+            player.sockerInKaffe = true;
         }
-        
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "socker")
+        {
+            Debug.Log("SOCKEROUTOFKAFFE");
+            sockerInKaffe = false;
+
+            // If the player is not in coffee, tell them
+            var player = other.GetComponent<GravityChanger>();
+            player.sockerInKaffe = false;
+        }
     }
 }
