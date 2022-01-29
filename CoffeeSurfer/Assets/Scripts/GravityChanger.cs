@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GravityChanger : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class GravityChanger : MonoBehaviour
     public Sprite spriteInverted;
 
     public GameObject player;
+    public Rigidbody2D playerRB;
 
     public BoxCollider2D trigger;
 
@@ -52,6 +54,12 @@ public class GravityChanger : MonoBehaviour
             // The default is (0, -9.8).
             Physics2D.gravity = new Vector2(0, newGravity);
 
+        }
+
+        //If player falls under -15.y the game resets
+        if (playerRB.position.y < -15f)
+        {
+            FindObjectOfType<GameController>().EndGame();
         }
 
         gravity = Physics2D.gravity.y;
