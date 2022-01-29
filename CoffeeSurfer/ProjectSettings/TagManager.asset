@@ -8,6 +8,7 @@ TagManager:
   - socker
   - gravity
   - kaffekopp
+  - border
   layers:
   - Default
   - TransparentFX
