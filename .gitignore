@@ -36,6 +36,7 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.log
+CoffeeSurfer/Logs/shadercompiler-UnityShaderCompiler.exe3.log
 CoffeeSurfer/Logs/shadercompiler-UnityShaderCompiler.exe2.log
 CoffeeSurfer/Logs/shadercompiler-UnityShaderCompiler.exe1.log
 CoffeeSurfer/Logs/shadercompiler-UnityShaderCompiler.exe0.log
