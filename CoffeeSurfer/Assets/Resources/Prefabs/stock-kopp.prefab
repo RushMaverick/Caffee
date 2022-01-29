@@ -77,8 +77,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: c6f0b5f9d158f534483447e70dc53d25, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: bf0075afe7ee24142b22df439489d297, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5fa1e16bc47444190acdbdaa547e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needforspeed: 5
+  needforspeed: 2
   playerRB: {fileID: 2485585435270306976, guid: 1f9bfdc9dfd707e48a618e3257613396,
     type: 3}
 --- !u!50 &8886574606634925624
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!114 &3075096132700591534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0fcee8ced81874ea54a2b7cbd694bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 30
 --- !u!1 &1378012134198749993
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,8 +199,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378012134198749993}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.000000012492283, y: 0, z: 0}
-  m_LocalScale: {x: 0.41917145, y: 0.5510465, z: 1}
+  m_LocalPosition: {x: 0.000000012492283, y: -0.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 486841406488669521}
@@ -217,8 +218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947e049f4a206b746a035dec24fb6eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteNormal: {fileID: 21300000, guid: c6f0b5f9d158f534483447e70dc53d25, type: 3}
-  spriteInverted: {fileID: 21300000, guid: e1efd5df8ab11d549b5471fbfa671ea2, type: 3}
+  spriteNormal: {fileID: 21300000, guid: bf0075afe7ee24142b22df439489d297, type: 3}
+  spriteInverted: {fileID: 21300000, guid: ed8d1281de554fd4b9f7f87212aad273, type: 3}
   player: {fileID: 2485585435270306977, guid: 1f9bfdc9dfd707e48a618e3257613396, type: 3}
   trigger: {fileID: 8801629874026630278}
 --- !u!61 &8801629874026630278
@@ -237,10 +238,10 @@ BoxCollider2D:
   m_Offset: {x: -0.13797045, y: -0.845068}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 19.2, y: 10.8}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
