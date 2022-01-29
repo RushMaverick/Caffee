@@ -13,7 +13,7 @@ public class CameraFollower : MonoBehaviour
 
     void Update()
     {
-        velocity = (playerRB.velocity.y / 2);
+        velocity = playerRB.transform.position.y;
         camDistance = offset.z * velocity;
         //Debug.Log("DISTANCE" + camDistance);
 
@@ -22,7 +22,12 @@ public class CameraFollower : MonoBehaviour
             camDistance *= -1.0f;
         }
 
-        transform.position = new Vector3(playerTransform.position.x + offset.x, playerTransform.position.y + offset.y, offset.z); // Camera follows the player with specified offset position
+        if (camDistance >= -20)
+        {
+            camDistance = -20;
+        }
+
+        transform.position = new Vector3(playerTransform.position.x + offset.x, playerTransform.position.y + offset.y, camDistance); // Camera follows the player with specified offset position
         
     }
 }
