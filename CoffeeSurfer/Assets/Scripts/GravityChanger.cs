@@ -16,6 +16,7 @@ public class GravityChanger : MonoBehaviour
     Collider2D sugarCollider;
 
     public bool sockerInKaffe = false;
+    public Rigidbody2D playerRB;
 
     GameObject[] cupObjects;
 
@@ -54,6 +55,11 @@ public class GravityChanger : MonoBehaviour
             // The default is (0, -9.8).
             Physics2D.gravity = new Vector2(0, newGravity);
 
+        }
+
+        if (playerRB.position.y < -15f)
+        {
+            FindObjectOfType<GameController>().EndGame();
         }
 
         gravity = Physics2D.gravity.y;
