@@ -103,23 +103,23 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.5
   m_Points:
-  - {x: -5.1199994, y: 0}
-  - {x: -2.3903363, y: 1.4957985}
-  - {x: -2.4053385, y: 0.52560014}
-  - {x: -2.1751683, y: -0.7948494}
-  - {x: -1.6128191, y: -1.5788742}
-  - {x: -1.1432322, y: -2.0321407}
-  - {x: -0.46218348, y: -2.1502352}
-  - {x: 0.20401178, y: -2.213195}
-  - {x: 0.90247804, y: -2.0531592}
-  - {x: 1.4496307, y: -1.5128753}
-  - {x: 1.9622369, y: -0.7170926}
-  - {x: 2.2446003, y: 0.057269216}
-  - {x: 2.369531, y: 0.79774636}
-  - {x: 2.3416302, y: 1.5401651}
-  - {x: 5.1199994, y: 0}
+  - {x: -3.1644604, y: 1.7402127}
+  - {x: -3.1424665, y: 1.1002955}
+  - {x: -2.9769576, y: 0.011446357}
+  - {x: -2.5662758, y: -1.1903523}
+  - {x: -1.7030746, y: -2.0930276}
+  - {x: -1.0830618, y: -2.3485432}
+  - {x: -0.2816723, y: -2.4666376}
+  - {x: 0.59511966, y: -2.4504967}
+  - {x: 1.3537562, y: -2.2113605}
+  - {x: 1.9911647, y: -1.6315262}
+  - {x: 2.533856, y: -0.7170926}
+  - {x: 2.786134, y: 0.057269216}
+  - {x: 2.8809798, y: 0.52089435}
+  - {x: 2.943335, y: 1.1051118}
+  - {x: 3.0494578, y: 1.2142546}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5fa1e16bc47444190acdbdaa547e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needforspeed: 2
+  needforspeed: 3
   playerRB: {fileID: 2485585435270306976, guid: 1f9bfdc9dfd707e48a618e3257613396,
     type: 3}
 --- !u!50 &8886574606634925624
@@ -235,7 +235,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.13797045, y: -0.845068}
+  m_Offset: {x: -0.16805589, y: -0.3902402}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -246,5 +246,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.002847, y: 6.5533047}
+  m_Size: {x: 6.309554, y: 4.5362396}
   m_EdgeRadius: 0

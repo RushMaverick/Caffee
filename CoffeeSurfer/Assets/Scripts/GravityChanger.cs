@@ -21,6 +21,8 @@ public class GravityChanger : MonoBehaviour
 
     public Sprite spriteNormal;
     public Sprite spriteInverted;
+    public Sprite playerSpriteNormal;
+    public Sprite playerSpriteInverted;
 
     public GameObject player;
 
@@ -66,33 +68,24 @@ public class GravityChanger : MonoBehaviour
                 {
                     cup.GetComponent<SpriteRenderer>().sprite = spriteInverted;
                 }
+
+                player.GetComponent<SpriteRenderer>().sprite = playerSpriteInverted;
             }
         }
         else
         {
             if (gravity > 0)
             {
-                Physics2D.gravity = new Vector2(0, -9.8f);
+                Physics2D.gravity = new Vector2(0, -18.0f);
 
                 foreach (GameObject cup in cupObjects)
                 {
                     cup.GetComponent<SpriteRenderer>().sprite = spriteNormal;
                 }
+                player.GetComponent<SpriteRenderer>().sprite = playerSpriteNormal;
+
             }
         }
-
-        /*
-        if (Physics2D.gravity.y < baseValue & !isInCoffee)
-        {
-            newGravity = gravity / decreaseExponential;
-            gravity = newGravity;
-            Physics2D.gravity = new Vector2(0, gravity);
-        }*/
-        /*if (Physics2D.gravity.y > baseValue & !isInCoffee)
-        {
-            Physics2D.gravity = new Vector2(0, baseValue);
-            Debug.Log("Resetting gravity!");
-        }*/
 
     }
 }

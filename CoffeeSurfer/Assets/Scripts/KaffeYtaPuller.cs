@@ -25,19 +25,12 @@ public class KaffeYtaPuller : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     bool sockerInKaffe = false;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "socker")
         {
-            Debug.Log("SOCKERINKAFFE");
             sockerInKaffe = true;
 
             var player = other.GetComponent<GravityChanger>();
@@ -49,7 +42,6 @@ public class KaffeYtaPuller : MonoBehaviour
     {
         if (other.tag == "socker")
         {
-            Debug.Log("SOCKEROUTOFKAFFE");
             sockerInKaffe = false;
 
             // If the player is not in coffee, tell them
