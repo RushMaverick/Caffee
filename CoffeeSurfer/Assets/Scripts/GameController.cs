@@ -17,6 +17,6 @@ public class GameController : MonoBehaviour
 
     void Restart ()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Menu");
     }
 }
